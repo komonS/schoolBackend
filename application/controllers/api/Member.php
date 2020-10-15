@@ -98,6 +98,13 @@ class Member extends RestController {
     	$this->response($result,200);
     }
 
+    public function info_get()
+    {
+        $memberID = $this->get("memberID");
+        $result = $this->membermodel->getMemberInfo($memberID);
+        $this->response($result,200);
+    }
+
     
 
    
